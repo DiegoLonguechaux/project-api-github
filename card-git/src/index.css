@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base{
+
+  body{
+    background-color: #f5f7ff;
+  }
+:root {
+
+    --background: #f5f7ff;
+    --foreground: 222 84% 5%;
+  
+    --card: 0 0 100%;
+    --card-foreground: 222 84% 5%;
+  
+    --primary: 0 0 100%;
+    --primary-foreground: 222 84% 5%;
+  
+    --secondary: 0 0 100%;
+    --secondary-foreground: 222 84% 5%;
+
+  }
+
+  [data-theme="dark"] {
+    --background: 222 84% 5%;
+    --foreground: 0 0 100%;
+
+    --card: 222 84% 5%;
+    --card-foreground: 0 0 100%;
+
+    --primary: 222 84% 5%;
+    --primary-foreground: 0 0 100%;
+
+    --secondary: 222 84% 5%;
+    --secondary-foreground: 0 0 100%;
+  }
+}
