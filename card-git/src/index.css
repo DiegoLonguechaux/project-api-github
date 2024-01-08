@@ -3,39 +3,29 @@
 @tailwind utilities;
 
 @layer base{
-
-  body{
-    background-color: #f5f7ff;
-  }
   
   :root {
-
     --background: #f5f7ff;
-  
     --card: #ffffff;
-  
     --primary: #0277ff;
-  
-    --secondary: 0 0 100%;
-    --secondary-foreground: 222 84% 5%;
-
-    --text-light: #91a5d4;
-    --text-middle: #6a7c9a;
-    --text-dark: #000000;
+    --lightgrey: #91a5d4;
+    --grey: #4a6a9b;
+    --dark: #000000;
+  }
+ 
+  .dark {
+    --background: #020617;
+    --card: #0f172a;
+    --primary: #0277ff;
+    --lightgrey: #91a5d4; 
+    --grey: #4a6a9b;
+    --dark: #ffffff;
   }
 
-  [data-theme="dark"] {
-    --background: 222 84% 5%;
-    --foreground: 0 0 100%;
-
-    --card: 222 84% 5%;
-    --card-foreground: 0 0 100%;
-
-    --primary: 222 84% 5%;
-    --primary-foreground: 0 0 100%;
-
-    --secondary: 222 84% 5%;
-    --secondary-foreground: 0 0 100%;
-  }
 }
-
+/*'background':'rgb(var(--background))',
+  'card':'rgb(var(--card))',
+  'primary':'rgb(var(--primary))',
+  'lightgrey':'rgb(var(--lightgrey))',
+  'grey':'rgb(var(--grey))',
+  'dark':'rgb(var(--dark))', */

@@ -1,5 +1,4 @@
 export default function Card({ data }) {
-    console.log(data);
     return (
         <div className="bg-card rounded-lg shadow-2xl p-6 gap-6">
             <div className="flex items-center gap-6 mb-2">
