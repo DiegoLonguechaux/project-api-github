@@ -4,7 +4,7 @@ export default function Card({ data }) {
             <div className="flex items-center gap-6 mb-2">
                 <img src={data.avatar_url} alt="profile" className="rounded-full w-20 h-20"/>
                 <div>
-                    <p className="font-mono text-2xl">{data.name}</p>
+                    <p className="font-mono text-2xl text-dark">{data.name}</p>
                     <p className="font-mono font-bold text-sm text-primary">@{data.login}</p>
                     <p className="font-mono text-sm text-grey">Joined {data.created_at && new Date(data.created_at).toLocaleDateString()}</p>
                 </div>
@@ -13,15 +13,15 @@ export default function Card({ data }) {
             <div className="font-mono flex justify-between bg-background rounded-lg px-4 py-2 my-6">
                 <div>
                     <p className="text-grey">Repos</p>
-                    <p className="font-bold text-2xl">{data.public_repos}</p>
+                    <p className="font-bold text-2xl text-dark">{data.public_repos}</p>
                 </div>
                 <div>
                     <p className="text-grey">Followers</p>
-                    <p className="font-bold text-2xl">{data.followers}</p>
+                    <p className="font-bold text-2xl text-dark">{data.followers}</p>
                 </div>
                 <div>
                     <p className="text-grey">Following</p>
-                    <p className="font-bold text-2xl">{data.following}</p>
+                    <p className="font-bold text-2xl text-dark">{data.following}</p>
                 </div>
             </div>
             <div className="font-mono grid grid-cols-2 gap-y-2 gap-x-6 my-6">
@@ -35,7 +35,7 @@ export default function Card({ data }) {
                 </div>
                 <div className="flex items-center gap-2 text-grey">
                     <svg xmlns="http://www.w3.org/2000/svg" height="16" width="20" viewBox="0 0 640 512" fill="#4a6a9b"><path d="M579.8 267.7c56.5-56.5 56.5-148 0-204.5c-50-50-128.8-56.5-186.3-15.4l-1.6 1.1c-14.4 10.3-17.7 30.3-7.4 44.6s30.3 17.7 44.6 7.4l1.6-1.1c32.1-22.9 76-19.3 103.8 8.6c31.5 31.5 31.5 82.5 0 114L422.3 334.8c-31.5 31.5-82.5 31.5-114 0c-27.9-27.9-31.5-71.8-8.6-103.8l1.1-1.6c10.3-14.4 6.9-34.4-7.4-44.6s-34.4-6.9-44.6 7.4l-1.1 1.6C206.5 251.2 213 330 263 380c56.5 56.5 148 56.5 204.5 0L579.8 267.7zM60.2 244.3c-56.5 56.5-56.5 148 0 204.5c50 50 128.8 56.5 186.3 15.4l1.6-1.1c14.4-10.3 17.7-30.3 7.4-44.6s-30.3-17.7-44.6-7.4l-1.6 1.1c-32.1 22.9-76 19.3-103.8-8.6C74 372 74 321 105.5 289.5L217.7 177.2c31.5-31.5 82.5-31.5 114 0c27.9 27.9 31.5 71.8 8.6 103.9l-1.1 1.6c-10.3 14.4-6.9 34.4 7.4 44.6s34.4 6.9 44.6-7.4l1.1-1.6C433.5 260.8 427 182 377 132c-56.5-56.5-148-56.5-204.5 0L60.2 244.3z"/></svg>
-                    <p>{data.blog || "Not Available"}</p>
+                    <p><a href="{data.blog || '#'}">{data.blog || "Not Available"}</a></p>
                 </div>
                 <div className="flex items-center gap-2 text-grey">
                     <svg xmlns="http://www.w3.org/2000/svg" height="16" width="12" viewBox="0 0 384 512" fill="#4a6a9b"><path d="M48 0C21.5 0 0 21.5 0 48V464c0 26.5 21.5 48 48 48h96V432c0-26.5 21.5-48 48-48s48 21.5 48 48v80h96c26.5 0 48-21.5 48-48V48c0-26.5-21.5-48-48-48H48zM64 240c0-8.8 7.2-16 16-16h32c8.8 0 16 7.2 16 16v32c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16V240zm112-16h32c8.8 0 16 7.2 16 16v32c0 8.8-7.2 16-16 16H176c-8.8 0-16-7.2-16-16V240c0-8.8 7.2-16 16-16zm80 16c0-8.8 7.2-16 16-16h32c8.8 0 16 7.2 16 16v32c0 8.8-7.2 16-16 16H272c-8.8 0-16-7.2-16-16V240zM80 96h32c8.8 0 16 7.2 16 16v32c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16V112c0-8.8 7.2-16 16-16zm80 16c0-8.8 7.2-16 16-16h32c8.8 0 16 7.2 16 16v32c0 8.8-7.2 16-16 16H176c-8.8 0-16-7.2-16-16V112zM272 96h32c8.8 0 16 7.2 16 16v32c0 8.8-7.2 16-16 16H272c-8.8 0-16-7.2-16-16V112c0-8.8 7.2-16 16-16z"/></svg>
